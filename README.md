@@ -7,20 +7,20 @@ Remote [Google Drive client](https://github.com/ewwink/heroku-google-drive) on H
 Create new app
 
 ```
-heroku create myapp -b https://github.com/ewwink/heroku-google-drive.git
+heroku create ratiri -b https://github.com/benz121/ratiri.git
 heroku git:clone -a ratiri
 ```
 
 Existing app, use: `add|set`
 
 ```
-heroku buildpacks:set https://github.com/ewwink/heroku-google-drive.git -a ratiri
+heroku buildpacks:set https://github.com/ewwink/benz121/ratiri.git -a ratiri
 ```
 
 go to `myapp` directory, create or copy `rclone.conf` and winrar registraton key `.rarreg.key` (optional) then commit the change
 
 ```
-cd myapp
+cd ratiri
 git add .
 git commit -am "add config"
 git push heroku master
@@ -34,7 +34,7 @@ Linux: $HOME/.config/rclone/rclone.conf
 ## Usage
 **Open remote Heroku**
 ```
-cd myapp
+cd ratiri
 heroku run bash
 # or
 heroku run bash --remote origin
